@@ -4,7 +4,7 @@ from posts.models import Post
 
 class PostSerializer(serializers.ModelSerializer):
     """
-    A class for a PostSerializer
+    A class for the PostSerializer
     """
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
