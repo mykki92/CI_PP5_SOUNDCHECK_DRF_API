@@ -6,6 +6,9 @@ from .serializers import PostSerializer
 
 
 class PostList(APIView):
+    """
+    A class view for the PostList
+    """
     serializer_class = PostSerializer
     permission_classes = [
         permissions.IsAuthenticatedOrReadOnly
@@ -19,14 +22,17 @@ class PostList(APIView):
         return Response(serializer.data)
 
     def post(self, request):
-            serializer = PostSerializer(
-                data=request.data, context={'request': request}
-            )
-            if serializer.is_valid():
-                serializer.save(owner=request.user)
-                return Response(
-                    serializer.data, status=status.HTTP_201_CREATED
-                )
+        """
+        A function to deserialize the post data
+        """
+        serializer = PostSerializer(
+            data=request.data, context={'request': request}
+        )
+        if serializer.is_valid():
+            serializer.save(owner=request.user)
             return Response(
-                serializer.errors, status=status.HTTP_400_BAD_REQUEST
+                serializer.data, status=status.HTTP_201_CREATED
             )
+        return Response(
+            serializer.errors, status=status.HTTP_400_BAD_REQUEST
+        )
