@@ -53,7 +53,6 @@ ALLOWED_HOSTS = [
     '8000-mykki92-cipp5soundcheck-xusfc7jqjdd.ws-eu107.gitpod.io',
     'localhost',
     'soundcheck-drf-api-15efb796f01f.herokuapp.com',
-    os.environ.get('ALLOWED_HOST'),
 ]
 
 
