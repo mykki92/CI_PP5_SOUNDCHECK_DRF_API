@@ -6,18 +6,18 @@ from rest_framework.test import APITestCase
 
 class PostListViewTests(APITestCase):
     def setUp(self):
-        User.objects.create_user(username='adam', password='password')
+        User.objects.create_user(username='tom', password='password')
 
     def test_can_list_posts(self):
-        adam = User.objects.get(username='adam')
-        Post.objects.create(owner=adam, title='a title')
+        tom = User.objects.get(username='tom')
+        Post.objects.create(owner=tom, title='a title')
         response = self.client.get('/posts/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         print(response.data)
         print(len(response.data))
 
     def test_logged_in_user_can_create_post(self):
-        self.client.login(username='adam', password='password')
+        self.client.login(username='tom', password='password')
         response = self.client.post('/posts/', {'title': 'a title'})
         count = Post.objects.count()
         self.assertEqual(count, 1)
@@ -30,13 +30,13 @@ class PostListViewTests(APITestCase):
 
 class PostDetailViewTests(APITestCase):
     def setUp(self):
-        adam = User.objects.create_user(username='tom', password='password')
-        brian = User.objects.create_user(username='jerry', password='password')
+        tom = User.objects.create_user(username='tom', password='password')
+        jerry = User.objects.create_user(username='jerry', password='password')
         Post.objects.create(
-            owner=adam, title='a title', content='toms content'
+            owner=tom, title='a title', content='toms content'
         )
         Post.objects.create(
-            owner=brian, title='another title', content='jerrys content'
+            owner=jerry, title='another title', content='jerrys content'
         )
 
     def test_can_retrieve_post_using_valid_id(self):
