@@ -81,22 +81,38 @@ In addition, posts, comments, likes and following can be created by logged-in us
 
 <details><summary>Screenshots - PROFILE</summary>
     <details><summary>Update profile</summary>
-    <img src="docs/testing/profile-update-test-01.png">
-    <img src="docs/testing/profile-update-test-02.png">
-    <img src="docs/testing/profile-update-test-03.png">
+    <img src="docs/testing/profile_update_test_01.png">
+    <img src="docs/testing/profile_update_test_02.png">
+    <img src="docs/testing/profile_update_test_03.png">
     </details>
     <details><summary>Delete profile</summary>
-    <img src="docs/testing/profile-delete-test-01.png">
-    <img src="docs/testing/profile-delete-test-02.png">
-    <img src="docs/testing/profile-delete-test-03.png">
+    <img src="docs/testing/profile_delete_test_01.png">
+    <img src="docs/testing/profile_delete_test_02.png">
+    <img src="docs/testing/profile_delete_test_03.png">
     </details>
     <details><summary>Create profile</summary>
-    <img src="docs/testing/profile-create-test-01.png">
-    <img src="docs/testing/profile-create-test-02.png">
-    <img src="docs/testing/profile-create-test-03.png">
+    <img src="docs/testing/profile_create_test_01.png">
+    <img src="docs/testing/profile_create_test_02.png">
+    <img src="docs/testing/profile_create_test_03.png">
     </details>
 </details>
+
+<details><summary>Screenshots - POST</summary>
+    <details><summary>Create post</summary>
+    <img src="docs/testing/post_create_test_01.png">
+    <img src="docs/testing/post_create_test_02.png">
+    </details>
+    <details><summary>Update post</summary>
+    <img src="docs/testing/post_update_test_01.png">
+    <img src="docs/testing/post_update_test_02.png">
+    </details>
+    <details><summary>Delete post</summary>
+    <img src="docs/testing/post_delete_test_01.png">
+    <img src="docs/testing/post_delete_test_02.png">
+    <img src="docs/testing/post_delete_test_03.png">
+    </details>
 </details>
+
 
 ### Automated testing
 Automated testing was done using the Django Rest Framework APITestCase.
