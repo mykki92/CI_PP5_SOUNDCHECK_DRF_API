@@ -1,4 +1,4 @@
-# Soundcheck API in DRF
+# Soundcheck DRF API
 
 **Developer: Michael Roberts**
 
@@ -52,7 +52,32 @@ This repository contains the API set up using Django REST Framework for the Soun
 
 ## Testing
 ### Manual testing of user stories
+- As an admin user, I want to be able to create, edit and delete the users, posts, comments and likes, so that I can have a control over content posted on the application and remove any potentially inappropriate content.
 
+**Test** | **Action** | **Expected Result** | **Actual Result**
+-------- | ------------------- | ------------------- | -----------------
+User | Create, update & delete user | A user can be created, edited or deleted | Works as expected
+User | Change permissions | User permissions can be updated | Works as expected
+Profile | Create, update & delete | User profile can be created, edited or deleted | Works as expected
+Post | Create, update & delete | A post can be created, edited or deleted | Works as expected
+Comment | Create, update & delete | A comment can be created, edited or deleted | Works as expected
+Like | Create & delete | A like can be created or deleted (like/unlike post) | Works as expected
+Follower | Create & delete | Follow or unfollow user | Works as expected
+
+In addition, posts, comments, likes and following can be created by logged-in users only. Users can only update or delete content posted by themselves.
+
+<details><summary>Screenshots - USER</summary>
+    <details><summary>Create user</summary>
+    <img src="docs/testing/user-create-test-01.png">
+    <img src="docs/testing/user-create-test-02.png">
+    <img src="docs/testing/user-create-test-03.png">
+    </details>
+    <details><summary>Change user permissions</summary>
+    <img src="docs/testing/user-change-permissions-test-01.png">
+    <img src="docs/testing/user-change-permissions-test-02.png">
+    <img src="docs/testing/user-change-permissions-test-03.png">
+    </details>
+</details>
 
 ### Automated testing
 Automated testing was done using the Django Rest Framework APITestCase.
@@ -76,6 +101,10 @@ Automated testing was done using the Django Rest Framework APITestCase.
 
 <details><summary>Comments Tests</summary>
 <img src="docs/testing/apitest-soundcheck-comments.png">
+</details>
+
+<details><summary>Combined Tests</summary>
+<img src="docs/testing/apitest-soundcheck-combined.png">
 </details>
 
 ## Credits
