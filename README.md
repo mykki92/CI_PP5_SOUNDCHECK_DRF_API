@@ -79,6 +79,25 @@ In addition, posts, comments, likes and following can be created by logged-in us
     </details>
 </details>
 
+<details><summary>Screenshots - PROFILE</summary>
+    <details><summary>Update profile</summary>
+    <img src="docs/testing/profile-update-test-01.png">
+    <img src="docs/testing/profile-update-test-02.png">
+    <img src="docs/testing/profile-update-test-03.png">
+    </details>
+    <details><summary>Delete profile</summary>
+    <img src="docs/testing/profile-delete-test-01.png">
+    <img src="docs/testing/profile-delete-test-02.png">
+    <img src="docs/testing/profile-delete-test-03.png">
+    </details>
+    <details><summary>Create profile</summary>
+    <img src="docs/testing/profile-create-test-01.png">
+    <img src="docs/testing/profile-create-test-02.png">
+    <img src="docs/testing/profile-create-test-03.png">
+    </details>
+</details>
+</details>
+
 ### Automated testing
 Automated testing was done using the Django Rest Framework APITestCase.
 
