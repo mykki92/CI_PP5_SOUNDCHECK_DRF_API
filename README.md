@@ -142,6 +142,19 @@ In addition, posts, comments, likes and following can be created by logged-in us
     </details>
 </details>
 
+<details><summary>Screenshots - FOLLOWER</summary>
+    <details><summary>Create follow</summary>
+    <img src="docs/testing/follower_create_test_01.png">
+    <img src="docs/testing/follower_create_test_02.png">
+    <img src="docs/testing/follower_create_test_02.png">
+    </details>
+    <details><summary>Delete follow</summary>
+    <img src="docs/testing/follower_delete_test_01.png">
+    <img src="docs/testing/follower_delete_test_02.png">
+    <img src="docs/testing/follower_delete_test_03.png">
+    </details>
+</details>
+
 
 ### Automated testing
 Automated testing was done using the Django Rest Framework APITestCase.
