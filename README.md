@@ -29,7 +29,6 @@ This repository contains the API set up using Django REST Framework for the Soun
 
 
 ## Technologies Used
-
 ### Languages & Frameworks
 - Python
 - Django
@@ -53,9 +52,34 @@ This repository contains the API set up using Django REST Framework for the Soun
 
 
 ## Testing
-
 ### Manual testing of user stories
+
+
 ### Automated testing
+Automated testing was done using the Django Rest Framework APITestCase.
+
+- Tests summary
+<details><summary>Profiles Tests</summary>
+<img src="docs/testing/apitest-soundcheck-profiles.png">
+</details>
+
+<details><summary>Posts Tests</summary>
+<img src="docs/testing/apitest-soundcheck-posts.png">
+</details>
+
+<details><summary>Followers Tests</summary>
+<img src="docs/testing/apitest-soundcheck-followers.png">
+</details>
+
+<details><summary>Likes Tests</summary>
+<img src="docs/testing/apitest-soundcheck-likes.png">
+</details>
+
+<details><summary>Comments Tests</summary>
+<img src="docs/testing/apitest-soundcheck-comments.png">
+</details>
+
+
 
 
 ## Credits
