@@ -113,6 +113,22 @@ In addition, posts, comments, likes and following can be created by logged-in us
     </details>
 </details>
 
+<details><summary>Screenshots - COMMENT</summary>
+    <details><summary>Create comment</summary>
+    <img src="docs/testing/comment_create_test_01.png">
+    <img src="docs/testing/comment_create_test_02.png">
+    </details>
+    <details><summary>Update comment</summary>
+    <img src="docs/testing/comment_update_test_01.png">
+    <img src="docs/testing/comment_update_test_02.png">
+    </details>
+    <details><summary>Delete comment</summary>
+    <img src="docs/testing/comment_delete_test_01.png">
+    <img src="docs/testing/comment_delete_test_02.png">
+    <img src="docs/testing/comment_delete_test_03.png">
+    </details>
+</details>
+
 
 ### Automated testing
 Automated testing was done using the Django Rest Framework APITestCase.
