@@ -68,14 +68,24 @@ In addition, posts, comments, likes and following can be created by logged-in us
 
 <details><summary>Screenshots - USER</summary>
     <details><summary>Create user</summary>
-    <img src="docs/testing/user-create-test-01.png">
-    <img src="docs/testing/user-create-test-02.png">
-    <img src="docs/testing/user-create-test-03.png">
+    <img src="docs/testing/user_create_test_01.png">
+    <img src="docs/testing/user_create_test_02.png">
+    <img src="docs/testing/user_create_test_03.png">
+    </details>
+    <details><summary>Update user</summary>
+    <img src="docs/testing/user_update_test_01.png">
+    <img src="docs/testing/user_update_test_02.png">
+    <img src="docs/testing/user_update_test_03.png">
+    </details>
+    <details><summary>Delete user</summary>
+    <img src="docs/testing/user_delete_test_01.png">
+    <img src="docs/testing/user_delete_test_02.png">
+    <img src="docs/testing/user_delete_test_03.png">
     </details>
     <details><summary>Change user permissions</summary>
-    <img src="docs/testing/user-change-permissions-test-01.png">
-    <img src="docs/testing/user-change-permissions-test-02.png">
-    <img src="docs/testing/user-change-permissions-test-03.png">
+    <img src="docs/testing/user_change_permissions_test_01.png">
+    <img src="docs/testing/user_change_permissions_test_02.png">
+    <img src="docs/testing/user_change_permissions_test_03.png">
     </details>
 </details>
 
@@ -161,27 +171,27 @@ Automated testing was done using the Django Rest Framework APITestCase.
 
 - Tests summary
 <details><summary>Profiles Tests</summary>
-<img src="docs/testing/apitest-soundcheck-profiles.png">
+<img src="docs/testing/apitest_soundcheck_profiles.png">
 </details>
 
 <details><summary>Posts Tests</summary>
-<img src="docs/testing/apitest-soundcheck-posts.png">
-</details>
-
-<details><summary>Followers Tests</summary>
-<img src="docs/testing/apitest-soundcheck-followers.png">
-</details>
-
-<details><summary>Likes Tests</summary>
-<img src="docs/testing/apitest-soundcheck-likes.png">
+<img src="docs/testing/apitest_soundcheck_posts.png">
 </details>
 
 <details><summary>Comments Tests</summary>
-<img src="docs/testing/apitest-soundcheck-comments.png">
+<img src="docs/testing/apitest_soundcheck_comments.png">
+</details>
+
+<details><summary>Likes Tests</summary>
+<img src="docs/testing/apitest_soundcheck_likes.png">
+</details>
+
+<details><summary>Followers Tests</summary>
+<img src="docs/testing/apitest_soundcheck_followers.png">
 </details>
 
 <details><summary>Combined Tests</summary>
-<img src="docs/testing/apitest-soundcheck-combined.png">
+<img src="docs/testing/apitest_soundcheck_combined.png">
 </details>
 
 ## Credits
