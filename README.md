@@ -195,6 +195,5 @@ Automated testing was done using the Django Rest Framework APITestCase.
 </details>
 
 ## Credits
-
-### Images
 ### Code
+This project was created based on the Code Institute's Django REST API walkthrough project ['Moments'](https://github.com/Code-Institute-Solutions/drf-api).
