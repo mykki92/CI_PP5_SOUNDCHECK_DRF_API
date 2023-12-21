@@ -4,7 +4,7 @@
 
 💻 [Live link](https://soundcheck-drf-api-15efb796f01f.herokuapp.com/)
 
-This repository contains the API set up using Django REST Framework for the Soundcheck front-end application ([repository here]() and [live website here]())
+This repository contains the API set up using Django REST Framework for the Soundcheck front-end application ([repository here](https://github.com/mykki92/CI_PP5_SOUNDCHECK) and [live website here](https://soundcheck-13ffdc050395.herokuapp.com/))
 
 
 ## Table of Contents
