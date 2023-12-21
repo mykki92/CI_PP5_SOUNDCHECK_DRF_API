@@ -117,6 +117,24 @@ The following models were created to represent the database model structure of t
     </details>
 </details>
 
+<details><summary>Screenshots - COMMENTS</summary>
+    <details><summary>Models</summary>
+    <img src="docs/validation/comments_models_validation.png">
+    </details>
+    <details><summary>Serializers</summary>
+    <img src="docs/validation/comments_serializers_validation.png">
+    </details>
+    <details><summary>Tests</summary>
+    <img src="docs/validation/comments_tests_validation.png">
+    </details>
+    <details><summary>Urls</summary>
+    <img src="docs/validation/comments_urls_validation.png">
+    </details>
+    <details><summary>Views</summary>
+    <img src="docs/validation/comments_views_validation.png">
+    </details>
+</details>
+
 
 ## Testing
 ### Manual testing of user stories
