@@ -21,6 +21,9 @@ This repository contains the API set up using Django REST Framework for the Soun
 
 
 ## Database
+The following models were created to represent the database model structure of the application:
+<img src="docs/readme/soundcheck-database-diagram.png">
+
 #### User Model
 - The User model contains information about the user. It is part of the Django allauth library.
 - One-to-one relation with the Profile model owner field
@@ -61,15 +64,15 @@ This repository contains the API set up using Django REST Framework for the Soun
 - Django
 
 ### Libraries & Tools
-- [APITestCase](https://www.django-rest-framework.org/api-guide/testing/) - Django Rest Framework APITestCase was used for automated testing
-- [Cloudinary](https://cloudinary.com/) to store static files
 - [Git](https://git-scm.com/) was used for version control via Gitpod terminal to push the code to GitHub
 - [GitHub](https://github.com/) was used as a remote repository to store project code
 - [Gitpod](https://gitpod.io/workspaces) - a virtual IDE workspace used to build this site
-- [Heroku](https://heroku.com) was used to deploy the project into live environment
 - [Django REST Framework](https://www.django-rest-framework.org/) was used to build the back-end API
 - [Django AllAuth](https://django-allauth.readthedocs.io/en/latest/index.html) was used for user authentication
+- [Cloudinary](https://cloudinary.com/) to store static files
 - [Pillow](https://pillow.readthedocs.io/en/stable/) was used for image processing and validation
+- [APITestCase](https://www.django-rest-framework.org/api-guide/testing/)Django Rest Framework APITestCase was used for automated testing
+- [Heroku](https://heroku.com) was used to deploy the project into live environment
 - [Psycopg2](https://www.psycopg.org/docs/) was used as a PostgreSQL database adapter for Python
 - [ElephantSQL](https://www.postgresql.org/) – deployed project on Heroku uses an ElephantSQL database
 
