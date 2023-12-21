@@ -135,6 +135,24 @@ The following models were created to represent the database model structure of t
     </details>
 </details>
 
+<details><summary>Screenshots - LIKES</summary>
+    <details><summary>Models</summary>
+    <img src="docs/validation/likes_models_validation.png">
+    </details>
+    <details><summary>Serializers</summary>
+    <img src="docs/validation/likes_serializers_validation.png">
+    </details>
+    <details><summary>Tests</summary>
+    <img src="docs/validation/likes_tests_validation.png">
+    </details>
+    <details><summary>Urls</summary>
+    <img src="docs/validation/likes_urls_validation.png">
+    </details>
+    <details><summary>Views</summary>
+    <img src="docs/validation/likes_views_validation.png">
+    </details>
+</details>
+
 
 ## Testing
 ### Manual testing of user stories
