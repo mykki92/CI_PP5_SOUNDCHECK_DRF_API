@@ -72,6 +72,7 @@ The following models were created to represent the database model structure of t
 - [Cloudinary](https://cloudinary.com/) to store static files
 - [Pillow](https://pillow.readthedocs.io/en/stable/) was used for image processing and validation
 - [APITestCase](https://www.django-rest-framework.org/api-guide/testing/)Django Rest Framework APITestCase was used for automated testing
+- [Code Institute Python Linter (PEP8)](https://pep8ci.herokuapp.com/) validation service was used to check the code for PEP8 requirements 
 - [Heroku](https://heroku.com) was used to deploy the project into live environment
 - [Psycopg2](https://www.psycopg.org/docs/) was used as a PostgreSQL database adapter for Python
 - [ElephantSQL](https://www.postgresql.org/) – deployed project on Heroku uses an ElephantSQL database
