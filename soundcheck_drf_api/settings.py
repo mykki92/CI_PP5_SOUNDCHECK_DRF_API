@@ -50,9 +50,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
-    '8000-mykki92-cipp5soundcheck-xusfc7jqjdd.ws-eu107.gitpod.io',
+    os.environ.get('ALLOWED_HOST'),
     'localhost',
-    'soundcheck-drf-api-15efb796f01f.herokuapp.com',
+    '8000-mykki92-cipp5soundcheck-xusfc7jqjdd.ws-eu107.gitpod.io',
 ]
 
 
