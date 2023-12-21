@@ -6,6 +6,7 @@
 
 This repository contains the API set up using Django REST Framework for the Soundcheck front-end application ([repository here]() and [live website here]())
 
+
 ## Table of Contents
   - [User Stories](#user-stories)
   - [Database](#database)
@@ -14,17 +15,44 @@ This repository contains the API set up using Django REST Framework for the Soun
   - [Testing](#testing)
   - [Credits](#credits)
 
+
 ## User Stories
 - As an admin user, I want to be able to create, edit and delete the users, posts, comments and likes, so that I can have a control over content posted on the application and remove any potentially inappropriate content.
 
-## Database
 
+## Database
 #### User Model
+- The User model contains information about the user. It is part of the Django allauth library.
+- One-to-one relation with the Profile model owner field
+- ForeignKey relation with the Follower model owner and followed fields
+- ForeignKey relation with the Post model owner field
+- ForeignKey relation with the Comment model owner field
+- ForeignKey relation with the Like model owner field
+
 #### Profile Model
+- The Profile model contains the following fields: owner, name,created_at, updated_at, content and image.
+- One-to-one relation between the owner field and the User model id field.
+
 #### Post Model
-#### Follower Model
+- The Post model contains the following fields: owner, created_at, updated_at, title, content and image.
+- ForeignKey relation with the Comment model post field.
+- ForeignKey relation with the Like model post field.
+
 #### Comment Model
+- The Comment model contains the following fields: owner, post, created_at, updated_at and content.
+- ForeignKey relation between the owner field and the User model id field
+- ForeignKey relation between the post field and the User model post field
+
 #### Like Model
+- The Like model contains the following fields: owner, post and created_at.
+- ForeignKey relation between to the User model id field.
+- ForeignKey relation between the owner field and the User model id field.
+- ForeignKey relation between the post field and the Post model post field.
+
+#### Follower Model
+- The Follower model contains the following fields: owner, followed and created_at.
+- ForeignKey relation between the owner field and the User model id field.
+- ForeignKey relation between the followed field and the User model post field.
 
 
 ## Technologies Used
@@ -45,8 +73,8 @@ This repository contains the API set up using Django REST Framework for the Soun
 - [Psycopg2](https://www.psycopg.org/docs/) was used as a PostgreSQL database adapter for Python
 - [ElephantSQL](https://www.postgresql.org/) – deployed project on Heroku uses an ElephantSQL database
 
-## Validation
 
+## Validation
 ### PEP8 Validation
 
 
@@ -165,7 +193,6 @@ In addition, posts, comments, likes and following can be created by logged-in us
     </details>
 </details>
 
-
 ### Automated testing
 Automated testing was done using the Django Rest Framework APITestCase.
 
@@ -193,6 +220,7 @@ Automated testing was done using the Django Rest Framework APITestCase.
 <details><summary>Combined Tests</summary>
 <img src="docs/testing/apitest_soundcheck_combined.png">
 </details>
+
 
 ## Credits
 ### Code
