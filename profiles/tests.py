@@ -3,6 +3,7 @@ from rest_framework import status
 from rest_framework.test import APITestCase
 from .models import Profile
 
+
 class ProfileDetailViewTests(APITestCase):
     def setUp(self):
         User.objects.create_user(username='tom',
