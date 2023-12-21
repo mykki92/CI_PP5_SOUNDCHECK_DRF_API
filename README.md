@@ -79,6 +79,25 @@ The following models were created to represent the database model structure of t
 
 ## Validation
 ### PEP8 Validation
+[Code Institute Python Linter (PEP8)](https://pep8ci.herokuapp.com/) validation service was used to check the code for PEP8 requirements. All the code passes with no errors or warnings.
+
+<details><summary>Screenshots - PROFILES</summary>
+    <details><summary>Models</summary>
+    <img src="docs/validation/profiles_models_validation.png">
+    </details>
+    <details><summary>Serializers</summary>
+    <img src="docs/validation/profiles_serializers_validation.png">
+    </details>
+    <details><summary>Tests</summary>
+    <img src="docs/validation/profiles_tests_validation.png">
+    </details>
+    <details><summary>Urls</summary>
+    <img src="docs/validation/profiles_urls_validation.png">
+    </details>
+    <details><summary>Views</summary>
+    <img src="docs/validation/profiles_views_validation.png">
+    </details>
+</details>
 
 
 ## Testing
