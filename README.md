@@ -81,6 +81,21 @@ The following models were created to represent the database model structure of t
 ### PEP8 Validation
 [Code Institute Python Linter (PEP8)](https://pep8ci.herokuapp.com/) validation service was used to check the code for PEP8 requirements. All the code passes with no errors or warnings.
 
+<details><summary>Screenshots - SOUNDCHECK</summary>
+    <details><summary>Permissions</summary>
+    <img src="docs/validation/soundcheck_permissions_validation.png">
+    </details>
+    <details><summary>Serializers</summary>
+    <img src="docs/validation/soundcheck_serializers_validation.png">
+    </details>
+    <details><summary>Urls</summary>
+    <img src="docs/validation/soundcheck_urls_validation.png">
+    </details>
+    <details><summary>Views</summary>
+    <img src="docs/validation/soundcheck_views_validation.png">
+    </details>
+</details>
+
 <details><summary>Screenshots - PROFILES</summary>
     <details><summary>Models</summary>
     <img src="docs/validation/profiles_models_validation.png">
