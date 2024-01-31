@@ -7,7 +7,7 @@ from .serializers import EventSerializer
 from soundcheck_drf_api.permissions import IsOwnerOrReadOnly
 
 
-class EventsList(generics.ListCreateAPIView):
+class EventsListView(generics.ListCreateAPIView):
     """
     List events or create an event if logged in
     The perform_create method associates the event with the logged in user.
@@ -44,3 +44,16 @@ class EventsList(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
+
+
+class EventDetailView(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Detail view of events 
+    User may update or delete event if they are the owner
+    """
+    serializer_class = EventSerializer
+    permission_classes = [IsOwnerOrReadOnly]
+    queryset = Event.objects.annotate(
+        comments_count=Count('comment', distinct=True),
+        interested_count=Count('interested', distinct=True),
+    ).order_by('-created_at')
