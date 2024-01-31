@@ -32,7 +32,7 @@ class Event(models.Model):
     location = models.CharField(max_length=255)
 
     class Meta:
-        ordering = ['-created_on']
+        ordering = ['-created_at']
 
     def __str__(self):
         return f'{self.id} {self.title}'

@@ -12,6 +12,7 @@ class EventSerializer(serializers.ModelSerializer):
     profile_image = serializers.ReadOnlyField(
         source='owner.profile.image.url'
     )
+    comments_count = serializers.ReadOnlyField()
 
     def get_is_owner(self, obj):
         request = self.context['request']
@@ -40,6 +41,5 @@ class EventSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'owner', 'is_owner', 'created_at', 'updated_at', 'title',
             'description', 'image', 'image_filter', 'event_start', 'event_end', 
-            'location', 'profile_id', 'profile_image',
+            'location', 'comments_count', 'profile_id', 'profile_image',
         ]
-        

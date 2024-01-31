@@ -1,10 +1,8 @@
 from rest_framework import generics, permissions, filters
 from django.db.models import Count
 from django_filters.rest_framework import DjangoFilterBackend
-
-from .serializers import EventSerializer
-from soundcheck_drf_api.permissions import IsUserOrReadOnly
 from .models import Event
+from .serializers import EventSerializer
 
 
 class EventsList(generics.ListCreateAPIView):
@@ -14,6 +12,9 @@ class EventsList(generics.ListCreateAPIView):
     """
     serializer_class = EventSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    queryset = Event.objects.annotate(
+        comments_count=Count('comment', distinct=True)
+    ).order_by('-created_at')
 
     filter_backends = [
         filters.OrderingFilter,
@@ -31,6 +32,7 @@ class EventsList(generics.ListCreateAPIView):
         'event_start',
     ]
     ordering_fields = [
+        'comments_count',
         'event_start',
     ]
 
