@@ -4,7 +4,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 
 from .models import Event
 from .serializers import EventSerializer
-from pp5_api.permissions import IsUserOrReadOnly
+from soundcheck_drf_api.permissions import IsOwnerOrReadOnly
 
 
 class EventsList(generics.ListCreateAPIView):
