@@ -57,3 +57,4 @@ class EventDetailView(generics.RetrieveUpdateDestroyAPIView):
         comments_count=Count('comment', distinct=True),
         interested_count=Count('interested', distinct=True),
     ).order_by('-created_at')
+    
