@@ -81,10 +81,11 @@ INSTALLED_APPS = [
 
     'profiles',
     'posts',
+    'events',
     'comments',
+    'interested',
     'likes',
     'followers',
-    'events',
 ]
 SITE_ID = 1
 MIDDLEWARE = [

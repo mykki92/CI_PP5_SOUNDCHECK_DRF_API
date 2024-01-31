@@ -13,6 +13,8 @@ class EventSerializer(serializers.ModelSerializer):
         source='owner.profile.image.url'
     )
     comments_count = serializers.ReadOnlyField()
+    interested_count = serializers.ReadOnlyField()
+    interested_id = serializers.SerializerMethodField()
 
     def get_is_owner(self, obj):
         request = self.context['request']
@@ -36,10 +38,20 @@ class EventSerializer(serializers.ModelSerializer):
             )
         return value
 
+    def get_interested_id(self, obj):
+        user = self.context['request'].user
+        if user.is_authenticated:
+            interested = Interested.objects.filter(
+                owner=user, event=obj
+            ).first()
+            return interested.id if interested else None
+        return None
+
     class Meta:
         model = Event
         fields = [
             'id', 'owner', 'is_owner', 'created_at', 'updated_at', 'title',
             'description', 'image', 'image_filter', 'event_start', 'event_end', 
-            'location', 'comments_count', 'profile_id', 'profile_image',
+            'location', 'comments_count', 'interested_count', 'interested_id',
+            'profile_id', 'profile_image',
         ]
