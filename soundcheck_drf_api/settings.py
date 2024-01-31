@@ -84,8 +84,9 @@ INSTALLED_APPS = [
     'events',
     'comments',
     'likes',
-    'interested',
     'followers',
+    'interested',
+    'attending',
 ]
 SITE_ID = 1
 MIDDLEWARE = [
