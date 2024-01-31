@@ -42,3 +42,4 @@ class EventSerializer(serializers.ModelSerializer):
             'description', 'image', 'image_filter', 'event_start', 'event_end', 
             'location', 'profile_id', 'profile_image',
         ]
+        
