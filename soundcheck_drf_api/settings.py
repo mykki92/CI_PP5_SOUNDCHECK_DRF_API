@@ -53,7 +53,7 @@ DEBUG = 'DEV' in os.environ
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
     'localhost',
-    '8000-mykki92-cipp5soundcheck-xusfc7jqjdd.ws-eu107.gitpod.io',
+    '8000-mykki92-cipp5soundcheck-zx134kpnarx.ws-eu107.gitpod.io',
 ]
 
 
