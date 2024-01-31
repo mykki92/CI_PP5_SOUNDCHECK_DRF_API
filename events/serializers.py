@@ -1,5 +1,7 @@
 from rest_framework import serializers
 from .models import Event
+from interested.models import Interested
+from attending.models import Attending
 
 
 class EventSerializer(serializers.ModelSerializer):
@@ -14,7 +16,9 @@ class EventSerializer(serializers.ModelSerializer):
     )
     comments_count = serializers.ReadOnlyField()
     interested_count = serializers.ReadOnlyField()
+    attending_count = serializers.ReadOnlyField()
     interested_id = serializers.SerializerMethodField()
+    attending_id = serializers.SerializerMethodField()
 
     def get_is_owner(self, obj):
         request = self.context['request']
@@ -47,11 +51,20 @@ class EventSerializer(serializers.ModelSerializer):
             return interested.id if interested else None
         return None
 
+    def get_attending_id(self, obj):
+        user = self.context['request'].user
+        if user.is_authenticated:
+            attending = Attending.objects.filter(
+                owner=user, event=obj
+            ).first()
+            return attending.id if attending else None
+        return None
+
     class Meta:
         model = Event
         fields = [
             'id', 'owner', 'is_owner', 'created_at', 'updated_at', 'title',
             'description', 'image', 'image_filter', 'event_start', 'event_end', 
             'location', 'comments_count', 'interested_count', 'interested_id',
-            'profile_id', 'profile_image',
+            'attending_count', 'attending_id', 'profile_id', 'profile_image',
         ]

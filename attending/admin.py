@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Join
+from .models import Attending
 
 
-admin.site.register(Join)
+admin.site.register(Attending)

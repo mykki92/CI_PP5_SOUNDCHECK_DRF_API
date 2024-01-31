@@ -17,6 +17,7 @@ class EventsListView(generics.ListCreateAPIView):
     queryset = Event.objects.annotate(
         comments_count=Count('comment', distinct=True),
         interested_count=Count('interested', distinct=True),
+        attending_count=Count('attending', distinct=True),
     ).order_by('-created_at')
 
     filter_backends = [
@@ -27,6 +28,7 @@ class EventsListView(generics.ListCreateAPIView):
     filterset_fields = {
         'owner__followed__owner__profile': ['exact'],
         'interested__owner__profile': ['exact'],
+        'attending__owner__profile': ['exact'],
         'owner__profile': ['exact'],
         'event_start': ['lte'],
     }
@@ -34,11 +36,14 @@ class EventsListView(generics.ListCreateAPIView):
         'owner__username',
         'title',
         'event_start',
+        'location',
     ]
     ordering_fields = [
         'comments_count',
         'interested_count',
-        'interested__created_at'
+        'interested__created_at',
+        'attending_count',
+        'attending__created_at',
         'event_start',
     ]
 
@@ -56,5 +61,6 @@ class EventDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Event.objects.annotate(
         comments_count=Count('comment', distinct=True),
         interested_count=Count('interested', distinct=True),
+        attending_count=Count('attending', distinct=True),
     ).order_by('-created_at')
     
