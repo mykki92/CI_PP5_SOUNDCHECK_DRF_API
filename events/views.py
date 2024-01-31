@@ -15,7 +15,8 @@ class EventsList(generics.ListCreateAPIView):
     serializer_class = EventSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Event.objects.annotate(
-        comments_count=Count('comment', distinct=True)
+        comments_count=Count('comment', distinct=True),
+        interested_count=Count('interested', distinct=True),
     ).order_by('-created_at')
 
     filter_backends = [
@@ -25,6 +26,7 @@ class EventsList(generics.ListCreateAPIView):
     ]
     filterset_fields = {
         'owner__followed__owner__profile': ['exact'],
+        'interested__owner__profile': ['exact'],
         'owner__profile': ['exact'],
         'event_start': ['lte'],
     }
@@ -35,6 +37,8 @@ class EventsList(generics.ListCreateAPIView):
     ]
     ordering_fields = [
         'comments_count',
+        'interested_count',
+        'interested__created_at'
         'event_start',
     ]
 
