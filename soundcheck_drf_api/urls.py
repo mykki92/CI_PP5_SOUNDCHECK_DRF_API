@@ -13,8 +13,10 @@ urlpatterns = [
     ),
     path('', include('profiles.urls')),
     path('', include('posts.urls')),
+    path('', include('events.urls')),
     path('', include('comments.urls')),
     path('', include('likes.urls')),
     path('', include('followers.urls')),
-    path('', include('events.urls')),
+    path('', include('interested.urls')),
+    
 ]
