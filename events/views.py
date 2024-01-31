@@ -1,8 +1,10 @@
 from rest_framework import generics, permissions, filters
 from django.db.models import Count
 from django_filters.rest_framework import DjangoFilterBackend
+
 from .models import Event
 from .serializers import EventSerializer
+from pp5_api.permissions import IsUserOrReadOnly
 
 
 class EventsList(generics.ListCreateAPIView):
