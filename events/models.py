@@ -22,7 +22,8 @@ class Event(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True)
     image = models.ImageField(
-        upload_to='images/', default='', blank=True
+        upload_to='images/', default='../soundcheck-event-default_gkxsxk', 
+        blank=True
     )
     image_filter = models.CharField(
         max_length=32, choices=image_filter_choices, default='normal'
