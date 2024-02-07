@@ -1,12 +1,12 @@
 from rest_framework import generics, permissions
 from soundcheck_drf_api.permissions import IsOwnerOrReadOnly
-from likes.models import Check
-from likes.serializers import CheckSerializer
+from checks.models import Check
+from checks.serializers import CheckSerializer
 
 
 class CheckList(generics.ListCreateAPIView):
     """
-    A class to list likes or create a like if logged in.
+    A class to list checks or create a check if logged in.
     """
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     serializer_class = CheckSerializer
@@ -18,7 +18,7 @@ class CheckList(generics.ListCreateAPIView):
 
 class CheckDetail(generics.RetrieveDestroyAPIView):
     """
-    Retrieve or delete  a like by id.
+    Retrieve or delete a check by id.
     """
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = CheckSerializer

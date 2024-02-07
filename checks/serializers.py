@@ -1,11 +1,11 @@
 from django.db import IntegrityError
 from rest_framework import serializers
-from likes.models import Check
+from checks.models import Check
 
 
 class CheckSerializer(serializers.ModelSerializer):
     """
-    A class for the like serializer.
+    A class for the check serializer.
     """
     owner = serializers.ReadOnlyField(source='owner.username')
 
@@ -15,7 +15,7 @@ class CheckSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         """
-        A function to handle duplicate likes
+        A function to handle duplicate checks
         """
         try:
             return super().create(validated_data)

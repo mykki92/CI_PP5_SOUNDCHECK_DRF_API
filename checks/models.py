@@ -5,7 +5,7 @@ from posts.models import Post
 
 class Check(models.Model):
     """
-    A class for the like model
+    A class for the checks model
     """
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey(
