@@ -16,7 +16,7 @@ class PostListViewTests(APITestCase):
         Test that posts present in the database can be listed
         """
         tom = User.objects.get(username='tom')
-        Post.objects.create(owner=tom, title='a title')
+        Post.objects.create(owner=tom, tags='tag')
         response = self.client.get('/posts/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         print(response.data)
@@ -27,7 +27,7 @@ class PostListViewTests(APITestCase):
         Test to ensure logged in user can create a post
         """
         self.client.login(username='tom', password='password')
-        response = self.client.post('/posts/', {'title': 'a title'})
+        response = self.client.post('/posts/', {'tags': 'tag'})
         count = Post.objects.count()
         self.assertEqual(count, 1)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -36,7 +36,7 @@ class PostListViewTests(APITestCase):
         """
         Test to ensure logged out user cannot create a post
         """
-        response = self.client.post('/posts/', {'title': 'a title'})
+        response = self.client.post('/posts/', {'tags': 'tag'})
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
 
 
@@ -48,10 +48,10 @@ class PostDetailViewTests(APITestCase):
         tom = User.objects.create_user(username='tom', password='password')
         jerry = User.objects.create_user(username='jerry', password='password')
         Post.objects.create(
-            owner=tom, title='a title', content='toms content'
+            owner=tom, tags='tag', caption='toms caption'
         )
         Post.objects.create(
-            owner=jerry, title='another title', content='jerrys content'
+            owner=jerry, tags='tag', caption='jerrys caption'
         )
 
     def test_can_retrieve_post_using_valid_id(self):
@@ -59,7 +59,7 @@ class PostDetailViewTests(APITestCase):
         Test if possible to retrieve a post with a valid ID
         """
         response = self.client.get('/posts/1/')
-        self.assertEqual(response.data['title'], 'a title')
+        self.assertEqual(response.data['tags'], 'tag')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_cant_retrieve_post_using_invalid_id(self):
@@ -74,9 +74,9 @@ class PostDetailViewTests(APITestCase):
         Test if user can update a post they own
         """
         self.client.login(username='tom', password='password')
-        response = self.client.put('/posts/1/', {'title': 'a new title'})
+        response = self.client.put('/posts/1/', {'tags': 'tag'})
         post = Post.objects.filter(pk=1).first()
-        self.assertEqual(post.title, 'a new title')
+        self.assertEqual(post.tags, 'tag')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_user_cant_update_another_users_post(self):
@@ -84,5 +84,5 @@ class PostDetailViewTests(APITestCase):
         Test if user can update other users' posts
         """
         self.client.login(username='tom', password='password')
-        response = self.client.put('/posts/2/', {'title': 'a new title'})
+        response = self.client.put('/posts/2/', {'tags': 'tag'})
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)

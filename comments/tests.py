@@ -27,11 +27,11 @@ class CommentDetailViewTests(APITestCase):
         tom = User.objects.create_user(username='tom', password='password')
         jerry = User.objects.create_user(username='jerry', password='password')
         Post.objects.create(
-            owner=tom, title='post title',
+            owner=tom, tags='tag',
             content='test'
         )
         Post.objects.create(
-            owner=jerry, title='post title2',
+            owner=jerry, tags='tag',
             content='test2'
         )
         Comment.objects.create(owner=tom, post_id=1, content='comment one')
