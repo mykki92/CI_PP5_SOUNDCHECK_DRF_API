@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from rest_framework import status
 from rest_framework.test import APITestCase
-from .models import Like
+from .models import Check
 from posts.models import Post
 
 
