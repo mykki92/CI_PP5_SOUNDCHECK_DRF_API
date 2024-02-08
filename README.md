@@ -30,24 +30,24 @@ The following models were created to represent the database model structure of t
 - ForeignKey relation with the Follower model owner and followed fields
 - ForeignKey relation with the Post model owner field
 - ForeignKey relation with the Comment model owner field
-- ForeignKey relation with the Like model owner field
+- ForeignKey relation with the Check model owner field
 
 #### Profile Model
-- The Profile model contains the following fields: owner, name,created_at, updated_at, content and image.
+- The Profile model contains the following fields: owner, created_at, updated_at, username, bio and profile_image.
 - One-to-one relation between the owner field and the User model id field.
 
 #### Post Model
-- The Post model contains the following fields: owner, created_at, updated_at, title, content and image.
+- The Post model contains the following fields: owner, created_at, updated_at, caption, tags and post_image.
 - ForeignKey relation with the Comment model post field.
-- ForeignKey relation with the Like model post field.
+- ForeignKey relation with the Check model post field.
 
 #### Comment Model
 - The Comment model contains the following fields: owner, post, created_at, updated_at and content.
 - ForeignKey relation between the owner field and the User model id field
 - ForeignKey relation between the post field and the User model post field
 
-#### Like Model
-- The Like model contains the following fields: owner, post and created_at.
+#### Check Model
+- The Check model contains the following fields: owner, post and created_at.
 - ForeignKey relation between to the User model id field.
 - ForeignKey relation between the owner field and the User model id field.
 - ForeignKey relation between the post field and the Post model post field.
@@ -151,7 +151,7 @@ The following models were created to represent the database model structure of t
     </details>
 </details>
 
-<details><summary>Screenshots - LIKES</summary>
+<details><summary>Screenshots - CHECKS</summary>
     <details><summary>Models</summary>
     <img src="docs/validation/likes_models_validation.png">
     </details>
@@ -199,10 +199,10 @@ User | Change permissions | User permissions can be updated | Works as expected
 Profile | Create, update & delete | User profile can be created, edited or deleted | Works as expected
 Post | Create, update & delete | A post can be created, edited or deleted | Works as expected
 Comment | Create, update & delete | A comment can be created, edited or deleted | Works as expected
-Like | Create & delete | A like can be created or deleted (like/unlike post) | Works as expected
+Check | Create & delete | A check can be created or deleted (check/uncheck post) | Works as expected
 Follower | Create & delete | Follow or unfollow user | Works as expected
 
-In addition, posts, comments, likes and following can be created by logged-in users only. Users can only update or delete content posted by themselves.
+In addition, posts, comments, checks and following can be created by logged-in users only. Users can only update or delete content posted by themselves.
 
 <details><summary>Screenshots - USER</summary>
     <details><summary>Create user</summary>
@@ -277,13 +277,13 @@ In addition, posts, comments, likes and following can be created by logged-in us
     </details>
 </details>
 
-<details><summary>Screenshots - LIKE</summary>
-    <details><summary>Create like</summary>
+<details><summary>Screenshots -CHECK </summary>
+    <details><summary>Create check</summary>
     <img src="docs/testing/like_create_test_01.png">
     <img src="docs/testing/like_create_test_02.png">
     <img src="docs/testing/like_create_test_02.png">
     </details>
-    <details><summary>Delete like</summary>
+    <details><summary>Delete check</summary>
     <img src="docs/testing/like_delete_test_01.png">
     <img src="docs/testing/like_delete_test_02.png">
     <img src="docs/testing/like_delete_test_03.png">
@@ -319,7 +319,7 @@ Automated testing was done using the Django Rest Framework APITestCase.
 <img src="docs/testing/apitest_soundcheck_comments.png">
 </details>
 
-<details><summary>Likes Tests</summary>
+<details><summary>Checks Tests</summary>
 <img src="docs/testing/apitest_soundcheck_likes.png">
 </details>
 
