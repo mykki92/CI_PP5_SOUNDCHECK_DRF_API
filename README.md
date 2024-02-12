@@ -17,7 +17,7 @@ This repository contains the API set up using Django REST Framework for the Soun
 
 
 ## User Stories
-- As an admin user, I want to be able to create, edit and delete the users, posts, comments and likes, so that I can have a control over content posted on the application and remove any potentially inappropriate content.
+- As an admin user, I want to be able to create, edit and delete the users, posts, comments and checks, so that I can have a control over content posted on the application and remove any potentially inappropriate content.
 
 
 ## Database
@@ -190,7 +190,7 @@ The following models were created to represent the database model structure of t
 
 ## Testing
 ### Manual testing of user stories
-- As an admin user, I want to be able to create, edit and delete the users, posts, comments and likes, so that I can have a control over content posted on the application and remove any potentially inappropriate content.
+- As an admin user, I want to be able to create, edit and delete the users, posts, comments and checks, so that I can have a control over content posted on the application and remove any potentially inappropriate content.
 
 **Test** | **Action** | **Expected Result** | **Actual Result**
 -------- | ------------------- | ------------------- | -----------------
