@@ -29,15 +29,15 @@ class CheckDetailViewTests(APITestCase):
         jerry = User.objects.create_user(username='jerry', password='password')
         Post.objects.create(
             owner=tom, tags='tag',
-            content='test'
+            caption='test'
         )
         Post.objects.create(
             owner=jerry, tags='tag2',
-            content='test2'
+            caption='test2'
         )
         Post.objects.create(
             owner=jerry, tags='tag3',
-            content='test3'
+            caption='test3'
         )
         Check.objects.create(owner=tom, post_id=2)
         Check.objects.create(owner=jerry, post_id=1)

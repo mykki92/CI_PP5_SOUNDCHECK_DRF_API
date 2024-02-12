@@ -320,7 +320,7 @@ Automated testing was done using the Django Rest Framework APITestCase.
 </details>
 
 <details><summary>Checks Tests</summary>
-<img src="docs/testing/apitest_soundcheck_likes.png">
+<img src="docs/testing/apitest_soundcheck_checks.png">
 </details>
 
 <details><summary>Followers Tests</summary>
