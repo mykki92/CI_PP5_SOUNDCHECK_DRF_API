@@ -279,14 +279,14 @@ In addition, posts, comments, checks and following can be created by logged-in u
 
 <details><summary>Screenshots -CHECK </summary>
     <details><summary>Create check</summary>
-    <img src="docs/testing/like_create_test_01.png">
-    <img src="docs/testing/like_create_test_02.png">
-    <img src="docs/testing/like_create_test_02.png">
+    <img src="docs/testing/check_create_test_01.png">
+    <img src="docs/testing/check_create_test_02.png">
+    <img src="docs/testing/check_create_test_02.png">
     </details>
     <details><summary>Delete check</summary>
-    <img src="docs/testing/like_delete_test_01.png">
-    <img src="docs/testing/like_delete_test_02.png">
-    <img src="docs/testing/like_delete_test_03.png">
+    <img src="docs/testing/check_delete_test_01.png">
+    <img src="docs/testing/check_delete_test_02.png">
+    <img src="docs/testing/check_delete_test_03.png">
     </details>
 </details>
 
