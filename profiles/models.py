@@ -12,7 +12,7 @@ class Profile(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     username = models.CharField(max_length=255, blank=True)
     bio = models.TextField(blank=True)
-    profile_image = models.ImageField(
+    image = models.ImageField(
         upload_to='images/', default='../soundcheck_default_profile'
     )
 
