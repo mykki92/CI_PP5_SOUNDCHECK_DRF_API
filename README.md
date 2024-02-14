@@ -33,7 +33,7 @@ The following models were created to represent the database model structure of t
 - ForeignKey relation with the Check model owner field
 
 #### Profile Model
-- The Profile model contains the following fields: owner, created_at, updated_at, username, bio and profile_image.
+- The Profile model contains the following fields: owner, created_at, updated_at, username, bio and image.
 - One-to-one relation between the owner field and the User model id field.
 
 #### Post Model
